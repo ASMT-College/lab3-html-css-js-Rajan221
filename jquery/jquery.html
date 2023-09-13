@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="mydiv">If you click on the "Hide" button, I will disappear.</div>
+
+    <button id="hide">Hide</button>
+    <button id="show" onclick=" $('#mydiv').show()">Show</button>
+  </body>
+
+  <script>
+    $("#hide").click(function () {
+      $("#mydiv").hide();
+    });
+
+    $("#mydiv").on("mouseenter", function () {
+      $(this).css("background-color", "blue");
+    });
+    $("#mydiv").on("mouseleave", function () {
+      $(this).css("background-color", "white");
+    });
+  </script>
+</html>
